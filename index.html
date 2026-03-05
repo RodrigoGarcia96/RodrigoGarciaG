@@ -114,13 +114,78 @@
             color: var(--text);
         }
 
+        /* ----------------------------- */
+        /* CAMBIO 1: Color verde para links */
+        /* Se cambió el color de los enlaces a un verde claro estético */
+        /* ----------------------------- */
+
         a {
-            color: var(--accent);
+            color: #4ade80;
+            /* verde claro */
             text-decoration: none;
         }
 
         a:hover {
-            text-decoration: underline; 
+            text-decoration: underline;
+        }
+
+        /* ----------------------------- */
+        /* CAMBIO 2: Grid para proyectos */
+        /* Permite mostrar proyectos como tarjetas */
+        /* ----------------------------- */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        /* ----------------------------- */
+        /* CAMBIO 3: Card de proyecto */
+        /* Diseño estilo "target" similar a blogs o portfolios */
+        /* ----------------------------- */
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ----------------------------- */
+        /* CAMBIO 4: Imagen del proyecto */
+        /* Imagen en la parte superior de la tarjeta */
+        /* ----------------------------- */
+
+        .project-image img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+
+        /* ----------------------------- */
+        /* CAMBIO 5: Contenido del proyecto */
+        /* Espaciado interno del texto */
+        /* ----------------------------- */
+
+        .project-content {
+            padding: 1rem;
+        }
+
+        .project-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: var(--muted);
         }
 
         .skills {
@@ -207,34 +272,56 @@
 
             <div class="section">
                 <div class="section-title">Proyectos seleccionados</div>
-                <ul>
-                    <li>
-                        <strong>Precio de la tortilla en México</strong> – análisis temporal y
-                        geográfico por estado, ciudad y tipo de tienda para detectar variaciones
-                        y tendencias.
-                    </li>
-                    <li>
-                        <strong>Dashboard de ventas</strong> – visualización de KPIs clave,
-                        análisis mensual y detección de productos de alto rendimiento.
-                    </li>
-                    <li>
-                        <strong>Exploratory Data Analysis</strong> – detección de outliers y
-                        patrones relevantes en datasets reales.
-                    </li>
-                </ul>
-            </div>  
+
+                <!-- CAMBIO: Se reemplaza la lista por un grid de proyectos -->
+                <div class="projects-grid">
+
+                    <!-- PROYECTO 1 -->
+                    <div class="project-card">
+
+                        <!-- Imagen del proyecto -->
+                        <div class="project-image">
+                            <img src="img/raspbot_1.webp" alt="Precio de la tortilla en México">
+                        </div>
+
+                        <div class="project-content">
+                            <div class="project-title">
+                                <a href="#">Raspbot Emotion</a>
+                            </div>
+
+                            <div class="project-description">
+                                Espejo Robótico de Emociones donde el robot imita la emoción del usuario. 
+                                Si el usuario sonríe,el robot acelera sus motores con alegría; si el usuario se ve enojado, el robot
+                                se molesta haciendo movimientos bruscos,entre otras emociones.
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- FIN DE PROYECTO 1 -->
+
+                    
+                
+                    
+                    
+                    
+                </div>
+            </div>
 
             <div class="section">
                 <div class="section-title">Entrenamientos seleccionados</div>
                 <ul>
                     <li>
-                        <a href="./reportes/reporte_p1.pdf" target="_blank"><strong>Entranamiento 1 </strong></a> – Responder
-                            preguntas y contestar ejercicios realizando visualizaciones de KPIs para un analisis de gasto anual 
-                            de los estados de México.
+                        <a href="./reportes/reporte_p1.pdf" target="_blank"><strong>Entranamiento 1 </strong></a> –
+                        Responder
+                        preguntas y contestar ejercicios realizando visualizaciones de KPIs para un analisis de gasto
+                        anual
+                        de los estados de México.
                     </li>
                     <li>
-                        <a href="./reportes/reporte_p2.html" target="_blank"><strong>Entranamiento 2 </strong></a> – Se usó un 
-                        dataset ficticio de un hospital, usando los datos de los pacientes para hacer análisis de columnas que nos 
+                        <a href="./reportes/reporte_p2.html" target="_blank"><strong>Entranamiento 2 </strong></a> – Se
+                        usó un
+                        dataset ficticio de un hospital, usando los datos de los pacientes para hacer análisis de
+                        columnas que nos
                         van pidiendo en el ejercicio.
                     </li>
                 </ul>
